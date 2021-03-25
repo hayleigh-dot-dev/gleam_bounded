@@ -96,7 +96,7 @@ pub fn between (val: Int, min: Int, max: Int) -> Bounded(Int) {
 ///     import gleam/should
 /// 
 ///     pub fn example () {
-///         let foo = int_8()
+///         let foo = int_8(0)
 ///     
 ///         bounded.min(of: foo) |> should.equal(-128)
 ///         bounded.max(of: foo) |> should.equal(127)
@@ -109,8 +109,8 @@ pub fn between (val: Int, min: Int, max: Int) -> Bounded(Int) {
 ///     </a>
 /// </div>
 ///
-pub fn int_8 () -> Bounded(Int) {
-    by(-128, 127)
+pub fn int_8 (val: Int) -> Bounded(Int) {
+    between(val, -128, 127)
 }
 
 /// <div style="text-align: right;">
@@ -129,7 +129,7 @@ pub fn int_8 () -> Bounded(Int) {
 ///     import gleam/should
 /// 
 ///     pub fn example () {
-///         let foo = uint_8()
+///         let foo = uint_8(0)
 ///     
 ///         bounded.min(of: foo) |> should.equal(0)
 ///         bounded.max(of: foo) |> should.equal(255)
@@ -142,8 +142,8 @@ pub fn int_8 () -> Bounded(Int) {
 ///     </a>
 /// </div>
 ///
-pub fn uint_8 () -> Bounded(Int) {
-    by(0, 255)
+pub fn uint_8 (val: Int) -> Bounded(Int) {
+    between(val, 0, 255)
 }
 
 /// <div style="text-align: right;">
@@ -162,7 +162,7 @@ pub fn uint_8 () -> Bounded(Int) {
 ///     import gleam/should
 /// 
 ///     pub fn example () {
-///         let foo = int_16()
+///         let foo = int_16(0)
 ///     
 ///         bounded.min(of: foo) |> should.equal(-32768)
 ///         bounded.max(of: foo) |> should.equal(32767)
@@ -175,8 +175,8 @@ pub fn uint_8 () -> Bounded(Int) {
 ///     </a>
 /// </div>
 ///
-pub fn int_16 () -> Bounded(Int) {
-    by(-32768, 32767)
+pub fn int_16 (val: Int) -> Bounded(Int) {
+    between(val, -32768, 32767)
 }
 
 /// <div style="text-align: right;">
@@ -195,7 +195,7 @@ pub fn int_16 () -> Bounded(Int) {
 ///     import gleam/should
 /// 
 ///     pub fn example () {
-///         let foo = uint_16()
+///         let foo = uint_16(0)
 ///     
 ///         bounded.min(of: foo) |> should.equal(0)
 ///         bounded.max(of: foo) |> should.equal(65535)
@@ -208,8 +208,8 @@ pub fn int_16 () -> Bounded(Int) {
 ///     </a>
 /// </div>
 ///
-pub fn uint_16 () -> Bounded(Int) {
-    by(0, 65535)
+pub fn uint_16 (val: Int) -> Bounded(Int) {
+    between(val, 0, 65535)
 }
 
 /// <div style="text-align: right;">
@@ -228,7 +228,7 @@ pub fn uint_16 () -> Bounded(Int) {
 ///     import gleam/should
 /// 
 ///     pub fn example () {
-///         let foo = int_32()
+///         let foo = int_32(0)
 ///     
 ///         bounded.min(of: foo) |> should.equal(-2147483648)
 ///         bounded.max(of: foo) |> should.equal(2147483647)
@@ -241,8 +241,8 @@ pub fn uint_16 () -> Bounded(Int) {
 ///     </a>
 /// </div>
 ///
-pub fn int_32 () -> Bounded(Int) {
-    by(-2147483648, 2147483647)
+pub fn int_32 (val: Int) -> Bounded(Int) {
+    between(val, -2147483648, 2147483647)
 }
 
 /// <div style="text-align: right;">
@@ -261,7 +261,7 @@ pub fn int_32 () -> Bounded(Int) {
 ///     import gleam/should
 /// 
 ///     pub fn example () {
-///         let foo = uint_32()
+///         let foo = uint_32(0)
 ///     
 ///         bounded.min(of: foo) |> should.equal(0)
 ///         bounded.max(of: foo) |> should.equal(4294967295)
@@ -274,8 +274,8 @@ pub fn int_32 () -> Bounded(Int) {
 ///     </a>
 /// </div>
 ///
-pub fn uint_32 () -> Bounded(Int) {
-    by(0, 4294967295)
+pub fn uint_32 (val: Int) -> Bounded(Int) {
+    between(val, 0, 4294967295)
 }
 
 /// <div style="text-align: right;">
@@ -296,7 +296,7 @@ pub fn uint_32 () -> Bounded(Int) {
 ///     import gleam/should
 /// 
 ///     pub fn example () {
-///         let foo = js_safe_int()
+///         let foo = js_safe_int(0)
 ///     
 ///         bounded.min(of: foo) |> should.equal(-9007199254740991)
 ///         bounded.max(of: foo) |> should.equal(9007199254740991)
@@ -309,8 +309,8 @@ pub fn uint_32 () -> Bounded(Int) {
 ///     </a>
 /// </div>
 ///
-pub fn js_safe_int () -> Bounded(Int) {
-    by(-9007199254740991, 9007199254740991)
+pub fn js_safe_int (val: Int) -> Bounded(Int) {
+    between(val, -9007199254740991, 9007199254740991)
 }
 
 
