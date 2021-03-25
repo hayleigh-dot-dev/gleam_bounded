@@ -37,7 +37,7 @@ pub fn int8 () -> BoundedInt {
 }
 
 ///
-pub fn unit8 () -> BoundedInt {
+pub fn uint8 () -> BoundedInt {
     by(0, 255)
 }
 
@@ -47,7 +47,7 @@ pub fn int16 () -> BoundedInt {
 }
 
 ///
-pub fn unit16 () -> BoundedInt {
+pub fn uint16 () -> BoundedInt {
     by(0, 65535)
 }
 
@@ -57,7 +57,7 @@ pub fn int32 () -> BoundedInt {
 }
 
 ///
-pub fn unit32 () -> BoundedInt {
+pub fn uint32 () -> BoundedInt {
     by(0, 4294967295)
 }
 
