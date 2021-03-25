@@ -26,10 +26,16 @@ import gleam/int.{Int}
 // CREATING BOUNDED VALUES -----------------------------------------------------
 
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Create an integer bounded by a min and max value. This defaults to using the
 /// provided min as the initial value.
 ///
-/// Although function parameters are named `min` and `max` for convinience, this
+/// Although function parameters are named `min` and `max` for convenience, this
 /// will always use whichever value is smaller as the minimum bound as determined
 /// by your comparison function.
 ///
@@ -45,10 +51,16 @@ pub fn by (min: Int, max: Int) -> Bounded(Int) {
     bounded.by(min, max, int.compare)
 }
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Create an integer bounded by a min and max value. The first parameter determines
 /// the initial value, although it will be clamped if it is out of bounds.
 ///
-/// Although function parameters are named `min` and `max` for convinience, this
+/// Although function parameters are named `min` and `max` for convenience, this
 /// will always use whichever value is smaller as the minimum bound as determined
 /// by your comparison function.
 ///
@@ -68,6 +80,12 @@ pub fn between (val: Int, min: Int, max: Int) -> Bounded(Int) {
 // PRESET BOUNDED VALUES -------------------------------------------------------
 
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Mimics the bounds of a signed 8-bit integer.
 ///
 /// <details>
@@ -95,6 +113,12 @@ pub fn int_8 () -> Bounded(Int) {
     by(-128, 127)
 }
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Mimics the bounds of an unsigned 8-bit integer.
 ///
 /// <details>
@@ -122,6 +146,12 @@ pub fn uint_8 () -> Bounded(Int) {
     by(0, 255)
 }
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Mimics the bounds of a signed 16-bit integer.
 ///
 /// <details>
@@ -149,6 +179,12 @@ pub fn int_16 () -> Bounded(Int) {
     by(-32768, 32767)
 }
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Mimics the bounds of an unsigned 16-bit integer.
 ///
 /// <details>
@@ -176,6 +212,12 @@ pub fn uint_16 () -> Bounded(Int) {
     by(0, 65535)
 }
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Mimics the bounds of a signed 32-bit integer.
 ///
 /// <details>
@@ -203,6 +245,12 @@ pub fn int_32 () -> Bounded(Int) {
     by(-2147483648, 2147483647)
 }
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Mimics the bounds of an unsigned 32-bit integer.
 ///
 /// <details>
@@ -230,9 +278,15 @@ pub fn uint_32 () -> Bounded(Int) {
     by(0, 4294967295)
 }
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Integers in JavaScript have a safe range of `2^53 - 1` to `-(2^53 - 1)`. This
 /// bounded constructor will keep you within those constraints if you don't want
-/// to deal with serialising and subsequent decoding of `BigInt`s in your JSON.
+/// to deal with serializing and subsequent decoding of `BigInt`s in your JSON.
 ///
 /// <details>
 ///     <summary>Example:</summary>
@@ -263,6 +317,12 @@ pub fn js_safe_int () -> Bounded(Int) {
 // UPDATING BOUNDED VALUES -----------------------------------------------------
 
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Increment a bounded value by one. This is a convenience function that might
 /// be useful if you're implementing something like a counter with a min/max
 /// range.
@@ -279,6 +339,12 @@ pub fn increment (bounded_int: Bounded(Int)) -> Bounded(Int) {
     })
 }
 
+/// <div style="text-align: right;">
+///     <a href="https://github.com/pd-andy/gleam_bounded/issues">
+///         <small>Spot a typo? Open an issue!</small>
+///     </a>
+/// </div>
+///
 /// Decrement a bounded value by one. This is a convenience function that might
 /// be useful if you're implementing something like a counter with a min/max
 /// range.
